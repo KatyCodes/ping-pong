@@ -3,9 +3,9 @@
  if ((userInput === 2) || (userInput ===1)) {
      alert("please enter a number larger than 2");
    } else {
-     for (var index = 1; index=userInput; index =+1) {
+     for (var index = 0; index=userInput; index =+1) {
        userInput -= 1;
-     $("#results").prepend("<li>" + userInput + "</li>");
+     $("#results").prepend("<li>" + userInput + "</li>").fadeIn(500);
     if (((userInput - 1) % 15=== 0) && (userInput != 1)) {
          $("#results").prepend("<li>" + "ping-pong" + "</li>");
          userInput -=1
@@ -17,7 +17,6 @@
         userInput -=1
       }
      }
-
     }
   }
 
