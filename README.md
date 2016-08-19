@@ -1,3 +1,5 @@
+#ping-pong
+
 #### By _Katy Henning_
 
 ## Description
@@ -30,15 +32,14 @@ Program substitutes all numbers divisible by 15 with "ping":
 
 
 
-
 ## Setup/Installation Requirements
 
 * _Copy the repository from GitHub_
 * _Open the index.html file a browser of your choice_
 
 ## GitHub link
+https://github.com/KatyCodes/ping-pong
 
-ht
 ## Licensing
 
 * MIT

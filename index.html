@@ -11,9 +11,9 @@
   <body>
     <div class="container">
       <h1>Ping-pong</h1>
-      <form>
-        <input id="input" class="form-control" type="number" placeholder="Enter a number" required>
-        <button class="btn">Submit</button>
+      <form data-toggle="validator" role="form">
+        <input id="number" type="number" class="form-control" placeholder="Enter a number" required>
+          <button type="submit" class="btn btn-primary">Submit!</button>
       </form>
       <ul id="results"></ul>
     </div>
