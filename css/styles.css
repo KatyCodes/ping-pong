@@ -1,0 +1,23 @@
+.jumbotron {
+  text-align: center;
+  background-image: url("../img/background.gif");
+  min-height: 600px;
+  text-shadow: 0px 2px 21px #99ccff;
+  color:black;
+}
+
+ul {
+  text-align: center;
+  list-style-type: none;
+  text-shadow: 0px 20px 30px #3B05A8;
+  float: right;
+  margin-right: 200px;
+  color: #0066cc;
+
+}
+
+body {
+  font-size: 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
