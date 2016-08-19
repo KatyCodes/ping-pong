@@ -1,30 +1,28 @@
 //backend
- function functionPingPong (userInput){
- if ((userInput === 2) || (userInput ===1)) {
-     alert("please enter a number larger than 2");
-   } else {
-     for (var index = 0; index=userInput; index =+1) {
-       userInput -= 1;
-     $("#results").prepend("<li>" + userInput + "</li>").fadeIn(500);
-    if (((userInput - 1) % 15=== 0) && (userInput != 1)) {
-         $("#results").prepend("<li>" + "ping-pong" + "</li>");
-         userInput -=1
-  } if (((userInput - 1) % 5=== 0) && (userInput != 1)) {
-        $("#results").prepend("<li>" + "pong" + "</li>");
-        userInput -=1
-  } else if (((userInput - 1) % 3=== 0)&& (userInput != 1)) {
-        $("#results").prepend("<li>" + "ping" + "</li>");
-        userInput -=1
-      }
-     }
-    }
-  }
 
+function pingPongFun(userInput){
+for (var index = 1; index<= userInput; index ++){
+  if (index % 15 === 0){
+    $("ul").append("<li>" + "ping-pong" + "</li>")
+}
+  else if (index % 5 === 0){
+    $("ul").append("<li>" + "pong" + "</li>")
+  }
+  else if (index % 3 === 0) {
+    $("ul").append("<li>" + "ping" + "</li>")
+  }
+  else {
+    $("ul").append("<li>" + index + "</li>")
+  }
+}
+}
 
 //front end user interface
 $(document).ready(function(){
   $("button").click(function(event){
     event.preventDefault();
-    functionPingPong(parseInt($("#number").val()));
+    var userInput = parseInt($("#number").val());
+    return(pingPongFun(userInput))
+  
   });
 });
