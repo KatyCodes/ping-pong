@@ -17,8 +17,10 @@
         userInput -=1
       }
      }
+
     }
   }
+
 
 //front end user interface
 $(document).ready(function(){
