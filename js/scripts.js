@@ -1,33 +1,36 @@
 //backend
-
-function pingPongFun(userInput){
-  $("ul").empty();
-for (var index = 1; index<= userInput; index ++){
-  if (userInput <=2) {
+function notEnough(userInput){
+  if (userInput <= 2) {
     alert ("Please enter a number higher than 2")
-    { break; }
-  }
-  else if (index % 15 === 0){
-    $("ul").append("<li>" + "ping-pong" + "</li>")
-}
-  else if (index % 5 === 0){
-    $("ul").append("<li>" + "pong" + "</li>")
-  }
-  else if (index % 3 === 0) {
-    $("ul").append("<li>" + "ping" + "</li>")
-  }
-  else {
-    $("ul").append("<li>" + index + "</li>")
   }
 }
-}
+function pingPongFun(userInput){
+    var pingPongArray = [ ];
+    for (var index = 1; index<= userInput; index ++){
+      if (index % 15 === 0){
+        pingPongArray.push("ping-pong");
+      }
+      else if (index % 5 === 0){
+        pingPongArray.push("pong");
+      }
+      else if (index % 3 === 0) {
+        pingPongArray.push("ping");
+      }
+      else {
+        pingPongArray.push(index);
+      }
+      } return(pingPongArray);
+    }
 
 //front end user interface
 $(document).ready(function(){
   $("button").click(function(event){
     event.preventDefault();
     var userInput = parseInt($("#number").val());
-    return(pingPongFun(userInput))
-
+    notEnough(userInput);
+    var result = pingPongFun(userInput);
+      result.forEach(function(item)
+      { $("ul").append("<li>" + item + "</li>")
+      });
   });
 });
